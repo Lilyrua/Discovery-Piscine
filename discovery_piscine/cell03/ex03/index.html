@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="todo.js" defer></script>
+    <style>
+        body{
+            background-color: rgba(3, 3, 3, 0.856);
+            margin: 0;
+            min-width: 250px;
+        }
+        h1{
+            margin-left: 10px;
+            text-align: center;
+            color: snow;
+        }
+        .header {
+            background-color: #000000e5;
+            padding: 30px 40px;
+            color: white;
+        }
+        
+        .newBtn{
+            font-size: 20px;
+            color: rgb(3, 3, 3);
+            position: relative;
+            min-width: 20%;
+            height: 50px;
+            text-align: center;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        button:hover{background-color: rgb(103, 255, 222);
+
+        }
+        #ft_list{
+            width:100%;
+            background-color: black;
+        }
+        #ft_list div{
+            display: flex;
+            font-size: 18px;
+            background-color: rgb(225, 224, 224);
+            min-width: 80%;
+            height: 30px;
+            padding: 10px;
+            padding-left: 18px;
+            /* justify-content: center; */
+            align-items: center;
+        }
+        #ft_list div:hover{
+            background-color: rgb(103, 255, 222);
+        }
+    </style>    
+</head>
+<body>
+  <div class="header">
+    <h1>To Do List</h1>
+    <button class="newBtn" onclick="addnew()">New</button>
+  </div>
+    <div id="ft_list" class="list"></div>
+</body>
+</html>

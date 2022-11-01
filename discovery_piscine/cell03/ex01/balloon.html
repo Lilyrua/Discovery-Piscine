@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaLo</title>
+</head>
+<body>
+    <style>
+        .balloon {
+            border-radius: 50%;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        .main {
+            text-align:center
+        }
+    </style>
+
+    <div class = "main">
+        <span class="balloon" id="ClikBL" onclick="Add()" onmouseleave="sizeChange()"></span> <p id="bug"></p>
+    </div>
+
+ <script>
+        x = 200;
+        color = ["red", "green", "blue"];
+        index = 0;
+        
+        function sizeChange() {
+            if (x > 200) {
+                x -= 5;
+                document.getElementById("ClikBL").style.width = x + "px";
+                document.getElementById("ClikBL").style.height = x + "px";
+                
+                index -= 1;
+                document.getElementById("ClikBL").style.backgroundColor = color[index % 3];
+            }
+            document.getElementById("bug").innerHTML = x;
+        }
+
+        function Add() {
+            if (x <= 420) {
+                x += 10;
+                document.getElementById("ClikBL").style.width = x + "px";
+                document.getElementById("ClikBL").style.height = x + "px";
+                index += 1;
+                document.getElementById("ClikBL").style.backgroundColor = color[index % 3];
+            }
+            else {
+                x = 200;
+                document.getElementById("ClikBL").style.width = x + "px";
+                document.getElementById("ClikBL").style.height = x + "px";
+                document.getElementById("ClikBL").style.backgroundColor = "red";
+            }
+            document.getElementById("bug").innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>

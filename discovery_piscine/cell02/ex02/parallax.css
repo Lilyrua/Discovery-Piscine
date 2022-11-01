@@ -1,0 +1,39 @@
+body,html { /*สำคัญในการทำ*/ 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.text {
+    color: snow;
+    display: flex; /*เอาไว้ และ Flex Item คือ elements ที่อยู่ภายใน Flex Container ให้ต่อกันในบรรทัด*/
+    justify-content: center; /*เป็นการกำหนดการจัดตำแหน่งของ Flex Item*/
+    padding-top: 25%;
+    position: relative; /*จะทำการจัดตำแหน่งโดยอิงจาก DIV ที่ห่อหุ้มตัวมันอยู่*/
+    margin-top: 0;
+}
+
+.fbg {
+    background-image: url("https://images.unsplash.com/photo-1519638399535-1b036603ac77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat; /*รูปจะถูกใช้ครั้งเดียวไม่มีต่อไปเลื่อยๆ*/
+    background-size: cover;
+    background-attachment: fixed; /*กำหนดให้รูป background ไม่เลื่อนตามการเลื่อน scroll bar สำคัญในการทำ*/ 
+}
+.center {
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    background-color: black;
+}
+
+.sbg {
+    background-image: url("https://i.pinimg.com/736x/d4/c1/14/d4c1143743cf6a4dc93b2cd5e3c78f82.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

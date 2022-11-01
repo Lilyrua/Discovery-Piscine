@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .balloon {
+            border-radius: 50%;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        .main {
+            text-align:center
+        }
+    </style>
+
+    <div class = "main">
+        <span class="balloon" id="ClikBL" onclick="Add()" onmouseleave="sizeChange()"></span> <p id="bug"></p>
+    </div>
+
+    <script>
+        x = 200;
+        color = ["green", "blue", "red"];
+        function sizeChange() {
+            if (x > 200) {
+                x -= 5;
+                $("#ClikBL").css("height", x + "px")
+                $("#ClikBL").css("width", x + "px")
+                $("#ClikBL").css("background-color", color[x % 3])
+            }
+            $("#bug").html(x)
+        }
+
+        function Add() {
+
+            if (x < 420) {
+                x += 10;
+                $("#ClikBL").css("height", x + "px")
+                $("#ClikBL").css("width", x + "px")
+                $("#ClikBL").css("background-color", color[x % 3])
+            }
+            else {
+                x = 200;
+                $("#ClikBL").css("height", x + "px")
+                $("#ClikBL").css("width", x + "px")
+                $("#ClikBL").css("background-color", "red")
+            }
+            $("#bug").html(x)
+        }
+    </script>
+</body>
+
+</html>
